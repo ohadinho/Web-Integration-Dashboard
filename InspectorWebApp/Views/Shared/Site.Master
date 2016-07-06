@@ -1,0 +1,165 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="InspectorWebApp.Views.Shared.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Inspector</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+
+    <!-- Bootstrap CSS -->    
+    <link href="/Resources/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="/Resources/css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="/Resources/css/elegant-icons-style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">    
+    <!-- full calendar css-->
+    <link href="/Resources/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+	<link href="/Resources/assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />    
+	<link href="/Resources/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <!-- Custom styles -->
+	<link rel="stylesheet" href="/Resources/css/fullcalendar.css">
+	<link href="/Resources/css/widgets.css" rel="stylesheet">
+    <link href="/Resources/css/style.css" rel="stylesheet">
+    <link href="/Resources/css/style-responsive.css" rel="stylesheet" />	
+	<link href="/Resources/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Resources/css/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="/Resources/css/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="/Resources/css/treant.css">    
+    <link rel="stylesheet" type="text/css" href="/Resources/css/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="/Resources/css/custom-colored.css">
+    <asp:ContentPlaceHolder ID="headPh" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>    
+        <!--header start-->
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
+            </div>
+
+            <!--logo start-->
+            <div>            
+            <a href="/Home" class="logo">
+            <i class="icon_search"></i> INSPECTOR
+            </a>
+            </div>
+            <!--logo end-->
+
+            <div class="nav search-row" id="top_menu">
+                <!--  search form start -->
+                <ul class="nav top-menu">                    
+                    <li>
+                        <form class="navbar-form">
+                            <input class="form-control" placeholder="Search" type="text">
+                        </form>
+                    </li>                    
+                </ul>
+                <!--  search form end -->                
+            </div>
+
+            <div class="top-nav notification-row">                
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">                                        
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" src="/Resources/img/hamudi.png">
+                            </span>
+                            <span class="username"><%= ViewData["UserName"]  %></span>                            
+                        </a>                       
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+      </header>      
+      <!--header end-->
+
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                  <li class="active">
+                      <a class="" href="/Home">
+                          <i class="icon_house_alt"></i>
+                          <span>Home</span>
+                      </a>
+                  </li>
+				  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>Interfaces</span>
+                          <span id="spanArrowMenuInterfaces" class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul id="ulSubMenuInterfaces" class="sub">                          
+                          <li class="sub-menu">
+						    <a class="" href="javascript:;">                               
+						       <span>InterfaceA</span>
+							   <span id="spanArrowMenuLabs" class="menu-arrow arrow_carrot-right"></span>
+							</a>
+                            <ul id="ulSubMenuLabs" class="sub">                          
+                                  <li class="sub-sub-menu">
+						            <a class="" href="/Interfaces/SubInterfaceDummyA">
+						               <span>SubInterfaceA</span>							           
+							        </a>
+                                    <a class="" href="/Interfaces/SubInterfaceDummyA">
+						               <span>SubInterfaceB</span>							           
+							        </a>
+                                    <a class="" href="/Interfaces/SubInterfaceDummyA">
+						               <span>SubInterfaceC</span>							           
+							        </a>                                                                     
+						          </li>
+                            </ul>
+						   </li>
+                           <li class="sub-menu">
+						        <a class="" href="javascript:;">
+						           <span>InterfaceB</span>	
+                                   <span id="spanArrowMenuRentgen" class="menu-arrow arrow_carrot-right"></span>						   
+							    </a>
+                                <ul id="ulSubMenuRentgen" class="sub">                          
+                                  <li class="sub-sub-menu">						            
+                                    <a class="" href="/Interfaces/SubInterfaceDummyA">
+						               <span>SubInterfaceA</span>							           
+							        </a>
+                                    <a class="" href="/Interfaces/SubInterfaceDummyA">
+						               <span>SubInterfaceB</span>							           
+							        </a>                     
+						          </li>
+                                </ul>
+						   </li>                          
+                           <li class="sub-menu">
+                                <a class="" href="/Interfaces/SearchMessage">
+						           <span>Search Message</span>							           
+							    </a>
+                           </li>
+                           <li class="sub-menu">
+                                    <a class="" href="/Interfaces/Validator">
+						               <span>Message Validator</span>							           
+							        </a>
+                           </li>
+                      </ul>
+                  </li>       
+                  <li class="sub-menu">
+                      <a href="/Interfaces/ProcessGraphExample" class="">
+                          <i class="icon_piechart"></i>
+                          <span>ProcessGraph</span>                          
+                      </a>                                            
+                  </li>                                    
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+        <asp:ContentPlaceHolder ID="bodyPh" runat="server">        
+        </asp:ContentPlaceHolder>          
+</body>
+</html>
