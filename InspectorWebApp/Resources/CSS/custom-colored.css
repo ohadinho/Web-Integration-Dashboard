@@ -1,0 +1,44 @@
+﻿/* optional Container STYLES */
+.chart { width: 900px; height: 550px; margin: 5px ; border: 3px solid #DDD; border-radius: 3px; background: #fff; }
+.Treant > .node {  }
+.Treant > p { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: bold; font-size: 12px; }
+.node-name { font-weight: bold;  color: Black;  text-align:center;}
+.node-title { color: Blue; display:none; }
+.node-desc { color: Red; display:none; }
+
+.nodeExample1 {
+    padding: 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 2px solid #000;       
+    width: 200px;
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+.gray {
+    background-color: #909090;
+}
+
+.light-gray {
+    background-color: #D3D3C7;
+}
+
+.light-green {
+    background-color: #90EE90;
+}
+
+.blue {
+    background-color: #A2BDFD;
+}
+
+.light-coral 
+{
+    background-color: lightcoral;
+}
+
+.red {
+    background-color: #FF0000;
+}
